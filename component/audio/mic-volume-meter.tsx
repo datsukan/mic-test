@@ -98,27 +98,27 @@ export const MicVolumeMeter = () => {
   }, [volume])
 
   return (
-    <div className='flex flex-col gap-3'>
-      <div className='flex gap-3'>
+    <>
+      <div className='mt-3 flex gap-3'>
         <MeterLegend colorClass={smallVolumeColorClass} label='小さい' />
         <MeterLegend colorClass={appropriateVolumeColorClass} label='適正' />
         <MeterLegend colorClass={louderVolumeColorClass} label='やや大きい' />
         <MeterLegend colorClass={tooLoudVolumeColorClass} label='大きすぎる' />
       </div>
-      <div className='overflow-hidden rounded-full bg-gray-100 outline outline-1 outline-gray-300'>
+      <div className='mt-3 overflow-hidden rounded-full bg-gray-100 outline outline-1 outline-gray-300'>
         <div
           className={`h-3 ${meterColorClass}`}
           style={{ width: meterWidth, transition: 'width: .1s' }}
         ></div>
       </div>
-      <div>
+      <div className='mt-7'>
         <span className='mr-2 rounded-full bg-gray-200 px-2 py-1 text-xs'>現在の音量</span>
         {Math.floor(volume)}
       </div>
-      <div>
+      <div className='mt-2'>
         <span className='mr-2 rounded-full bg-red-200 px-2 py-1 text-xs'>最大の音量</span>
         {Math.floor(maxVolume)}
       </div>
-    </div>
+    </>
   )
 }
