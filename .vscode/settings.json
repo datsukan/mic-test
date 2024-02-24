@@ -2,7 +2,7 @@
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.tabSize": 2,
   "editor.formatOnSave": true,
-  "cSpell.words": ["clsx"],
+  "cSpell.words": ["clsx", "datsukan"],
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit"
   },
