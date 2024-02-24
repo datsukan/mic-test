@@ -1,32 +1,45 @@
 'use client'
 
+import dynamic from 'next/dynamic'
+import { SectionBlock } from '@/component/section-block'
 import { Label } from '@/component/label'
 import { MicVolumeMeter } from '@/component/audio/mic-volume-meter'
+import { VoiceText } from '@/component/audio/voice-text'
+const Recorder = dynamic(() => import('@/component/audio/recorder').then((m) => m.Recorder), {
+  ssr: false,
+})
 
 export default function Home() {
   return (
-    <main className='container mx-auto flex flex-col gap-3'>
-      <div className='py-3'>
+    <main className='container mx-auto flex flex-col gap-8'>
+      <div className='pt-4'>
         <h1 className='text-3xl font-bold'>Mic Test</h1>
       </div>
 
-      <div className='flex flex-col gap-6 rounded p-4 outline outline-1 outline-gray-200'>
+      <SectionBlock>
         <div>
           <Label htmlFor='volume'>ボリューム</Label>
           <div className='py-2'>
             <MicVolumeMeter />
           </div>
         </div>
-
-        <hr />
-
+      </SectionBlock>
+      <SectionBlock>
         <div>
-          <Label htmlFor='volume'>喋った内容</Label>
+          <Label htmlFor='volume'>喋った言葉</Label>
           <div className='py-2'>
-            <p>ほげほげ ほげほげほげほげ</p>
+            <VoiceText />
           </div>
         </div>
-      </div>
+      </SectionBlock>
+      <SectionBlock>
+        <div>
+          <Label htmlFor='volume'>録音</Label>
+          <div className='py-2'>
+            <Recorder />
+          </div>
+        </div>
+      </SectionBlock>
     </main>
   )
 }

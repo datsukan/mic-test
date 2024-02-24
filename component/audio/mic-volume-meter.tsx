@@ -105,7 +105,7 @@ export const MicVolumeMeter = () => {
         <MeterLegend colorClass={louderVolumeColorClass} label='やや大きい' />
         <MeterLegend colorClass={tooLoudVolumeColorClass} label='大きすぎる' />
       </div>
-      <div className='overflow-hidden rounded-full outline outline-1 outline-gray-300'>
+      <div className='overflow-hidden rounded-full bg-gray-100 outline outline-1 outline-gray-300'>
         <div
           className={`h-3 ${meterColorClass}`}
           style={{ width: meterWidth, transition: 'width: .1s' }}
