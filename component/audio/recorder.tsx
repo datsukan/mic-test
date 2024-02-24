@@ -16,7 +16,7 @@ export const Recorder = () => {
       <div className='flex gap-3'>
         <button
           onClick={isRecording ? stopRecording : startRecording}
-          className={`flex items-center gap-2 rounded px-3 py-2 text-sm outline outline-1 hover:bg-slate-100 ${isRecording ? 'text-red-600 outline-red-600' : 'outline-gray-300'}`}
+          className={`flex items-center gap-2 rounded-md px-3 py-2 text-sm outline outline-1 hover:bg-slate-100 ${isRecording ? 'text-red-600 outline-red-600' : 'outline-gray-300'}`}
         >
           <div className='relative'>
             {isRecording && (

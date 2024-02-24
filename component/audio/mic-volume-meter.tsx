@@ -99,7 +99,7 @@ export const MicVolumeMeter = () => {
 
   return (
     <>
-      <div className='mt-3 flex gap-3'>
+      <div className='flex gap-3 pt-3'>
         <MeterLegend colorClass={smallVolumeColorClass} label='小さい' />
         <MeterLegend colorClass={appropriateVolumeColorClass} label='適正' />
         <MeterLegend colorClass={louderVolumeColorClass} label='やや大きい' />

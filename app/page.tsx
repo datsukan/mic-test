@@ -29,28 +29,71 @@ export default function Home() {
           </div>
 
           <SectionBlock>
-            <div>
-              <Label htmlFor='volume'>音量</Label>
-              <div className='py-2'>
-                <MicVolumeMeter />
-              </div>
+            <Label htmlFor='volume'>音量</Label>
+            <div className='pt-3'>
+              <MicVolumeMeter />
             </div>
           </SectionBlock>
           <SectionBlock>
-            <div>
-              <Label htmlFor='volume'>音声認識</Label>
-              <div className='py-2'>
-                <VoiceText />
-              </div>
+            <Label htmlFor='volume'>音声認識</Label>
+            <div className='pt-3'>
+              <VoiceText />
             </div>
           </SectionBlock>
           <SectionBlock>
-            <div>
-              <Label htmlFor='volume'>録音</Label>
-              <div className='py-2'>
-                <Recorder />
-              </div>
+            <Label htmlFor='volume'>録音</Label>
+            <div className='pt-3'>
+              <Recorder />
             </div>
+          </SectionBlock>
+
+          <SectionBlock>
+            <Label htmlFor='volume'>環境情報</Label>
+            <ul className='mt-3 list-inside list-disc space-y-2 pl-2 text-sm'>
+              <li>
+                すべての機能が利用できる環境
+                <ul className='mt-2 list-inside list-disc space-y-2 pl-4 text-sm'>
+                  <li>Google Chrome (Windows, macOS)</li>
+                </ul>
+              </li>
+              <li>
+                音声認識以外の機能が利用できる環境
+                <ul className='mt-2 list-inside list-disc space-y-2 pl-4 text-sm'>
+                  <li>Google Chrome (Android)</li>
+                  <li>WebView (Android)</li>
+                </ul>
+              </li>
+              <li>
+                録音以外の機能が利用できる環境
+                <ul className='mt-2 list-inside list-disc space-y-2 pl-4 text-sm'>
+                  <li>Safari (macOS, iOS)</li>
+                  <li>Google Chrome (iOS)</li>
+                </ul>
+              </li>
+              <li>
+                音量の機能のみが利用できる環境
+                <ul className='mt-2 list-inside list-disc space-y-2 pl-4 text-sm'>
+                  <li>WebView (iOS)</li>
+                </ul>
+              </li>
+            </ul>
+
+            <p className='mt-3 text-sm text-gray-500'>
+              ※出来るだけ多くの環境で機能するように可能な範囲で改善していく予定です
+            </p>
+
+            <hr className='my-4' />
+
+            <Label htmlFor='volume'>ソースコード</Label>
+            <p className='mt-3'>
+              <a
+                href='https://github.com/datsukan/mic-test'
+                target='_black'
+                className='text-sm text-blue-600 hover:underline'
+              >
+                GitHub - datsukan/mic-test
+              </a>
+            </p>
           </SectionBlock>
         </div>
 

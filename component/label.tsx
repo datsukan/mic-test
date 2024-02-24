@@ -7,7 +7,7 @@ interface Props {
 
 export const Label = ({ children, htmlFor }: Props) => {
   return (
-    <label htmlFor={htmlFor} className='font-black'>
+    <label htmlFor={htmlFor} className='font-bold'>
       {children}
     </label>
   )
